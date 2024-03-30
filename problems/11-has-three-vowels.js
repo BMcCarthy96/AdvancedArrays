@@ -16,11 +16,24 @@ console.log(hasThreeVowels('go home'));         //  false
 
 */
 
-let hasThreeVowels = function(string) {
-    // Your code here 
-};
+let hasThreeVowels = function (string) {
+    let vowels = "aeiou";
 
-// Your code here 
+    let words = string.split(" ");
+
+    let filteredWords = words.filter((word) => {
+        let vowelCounter = 0;
+
+        for (let char of word) {
+            if (vowels.includes(char) && vowelCounter >= 3) {
+                vowelCounter++;
+            }
+        }
+        return true;
+    });
+
+    return false;
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
