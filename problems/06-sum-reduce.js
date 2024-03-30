@@ -12,14 +12,17 @@ console.log(sumWithReduce([])); // 0
 
 */
 
-let sumWithReduce = function(nums) {
-  // Your code here 
+let sumWithReduce = function (nums) {
+    return nums.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        0
+    );
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-  module.exports = sumWithReduce;
+    module.exports = sumWithReduce;
 } catch (e) {
-  module.exports = null;
+    module.exports = null;
 }

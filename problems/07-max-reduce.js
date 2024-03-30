@@ -14,14 +14,15 @@ console.log(maxWithReduce([-2, -3, -7, 3])); // 3
 
 */
 
-let maxWithReduce = function(nums) {
-    // Your code here 
+let maxWithReduce = function (nums) {
+    let max = nums.reduce((a, b) => Math.max(a, b), nums[0]);
+    return max;
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-  module.exports = maxWithReduce;
+    module.exports = maxWithReduce;
 } catch (e) {
-  module.exports = null;
+    module.exports = null;
 }
