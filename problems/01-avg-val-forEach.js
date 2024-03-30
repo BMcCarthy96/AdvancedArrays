@@ -13,14 +13,26 @@ console.log(avgVal([])); // null
 
 */
 
-let avgVal = function(arr) {
+let avgVal = function (arr) {
+    if (arr.length === 0) {
+        return null;
+    }
 
+    let average = 0;
+    let sum = 0;
+
+    arr.forEach((key) => {
+        sum += key;
+        average = sum / arr.length;
+    });
+    console.log(average);
+    return average;
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-  module.exports = avgVal;
+    module.exports = avgVal;
 } catch (e) {
-  module.exports = null;
+    module.exports = null;
 }
